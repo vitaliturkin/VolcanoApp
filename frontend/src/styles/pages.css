@@ -1,0 +1,533 @@
+@font-face {
+    font-family: Rubik;
+    src: url("/public/fonts/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RubikLight;
+    src: url("/public/fonts/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RubikBold;
+    src: url("/public/fonts/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: RubikItalic;
+    src: url("/public/fonts/Rubik-Italic.ttf") format("truetype");
+}
+
+
+body {
+    font-family: Rubik, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loading__message {
+    font-family: RubikItalic, sans-serif;
+    margin-bottom: 20px;
+}
+
+.form-msg-error{
+    color: #ff001d;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Home Page */
+.home {
+    position: relative;
+}
+
+.home__img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.home__info {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+}
+
+.home__info-title {
+    font-size: 50px;
+    color: #fff;
+    padding-top: 70px;
+    margin-top: unset;
+    margin-bottom: 60px;
+}
+
+.home__info-description {
+    color: #fff;
+    font-size: 20px;
+    margin-top: unset;
+    margin-bottom: 60px;
+}
+
+.home__info-links {
+    display: flex;
+}
+
+.home__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+    border: 3px solid rgb(72, 35, 40);
+    border-radius: 40px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.home__link:hover {
+    color: rgb(160 82 92);
+    border-color: rgb(217, 87, 104);
+}
+
+.login-link {
+    padding: 20px 57px;
+    margin-left: 20px;
+}
+
+.home__about {
+    padding: 60px 0;
+}
+
+
+.home__about-title{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+
+.home__about-text{
+    font-size: 16px;
+}
+
+#home__about-text2{
+    margin-top: 15px;
+}
+
+.home__about-link{
+    text-decoration: none;
+    color: #4d2727;
+}
+
+.home__about-link:hover{
+    color: #c95656;
+}
+
+.home__quote{
+    padding: 40px 0;
+    background-color: #966770;
+    color:  rgb(255, 231, 235);
+}
+
+.home__quote-title{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.home__quote-text{
+    font-size: 20px;
+    font-family: RubikBold, sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.home__quote-author{
+    font-size: 15px;
+    font-family: RubikItalic, sans-serif;
+    text-align: end;
+}
+
+.home__gallery{
+    padding: 40px 0;
+    background-color: #eff1f3;
+}
+
+.home__gallery-title{
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.home__gallery-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home__gallery-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.home__gallery-img:hover {
+    transform: scale(1.3);
+}
+
+/* VolcanoesTable Page */
+.volcanoes {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.volcanoes__title {
+    margin-bottom: 20px;
+}
+
+.volcanoes_form {
+    margin-bottom: 20px;
+}
+
+.volcanoes__form-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.volcanoes__form-populated {
+    margin: 20px 0;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.badge-secondary {
+    background-color: #6e454c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.volcano-table-info {
+    margin-bottom: 20px;
+}
+
+.ag-theme-alpine {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    height: 500px;
+}
+
+.ag-header-cell {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.ag-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.ag-row-hover {
+    background-color: #f0f0f0;
+}
+
+/* Volcano Page */
+.volcano {
+    padding: 20px 0;
+}
+
+.volcanoData {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    margin-bottom: 30px;
+}
+
+.volcano-info {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.volcano-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.volcano-chart {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.chart-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.chart-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.volcano__data{
+    list-style: none;
+    padding: 0;
+}
+
+.volcano__data li {
+    margin-bottom: 10px;
+}
+
+.chart-table {
+    flex-grow: 1;
+    max-width: 600px;
+    height: 300px;
+}
+
+.volcano-button {
+    padding: 10px 20px;
+    background-color: #6e454c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.volcano-button:hover {
+    background-color: #966770;
+}
+
+
+/* Register Page */
+.register {
+position: relative;
+}
+
+.register__img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.register__form{
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 171px);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.register__form-title {
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.register__form-text {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.register__form-label {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.register__form-input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register__button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7e2a3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-form .register-button:hover {
+    background-color: #a62f40;
+}
+
+/* Login Page */
+.login {
+position: relative;
+}
+
+.login__img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.login__form {
+    position: absolute;
+    top: 150px;
+    left: calc(50% - 171px);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.login__title {
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.login__form-label {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.login__form-input {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login__button {
+    padding: 10px 20px;
+    background-color: #c50e2d;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logout__button {
+    padding: 10px 20px;
+    background-color: #7e2a3c;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.logout__button:hover {
+    background-color: #751825;
+}
+
+.login__button:hover {
+    background-color: #a62f40;
+}
+
+/* Adaptive */
+
+@media screen and (max-width: 800px) {
+
+    .volcanoData {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        text-align: center;
+    }
+
+    .volcano-info {
+        grid-row-start: unset;
+        grid-row-end: unset;
+    }
+
+    .volcano-chart {
+        grid-column-start: unset;
+        grid-column-end: unset;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .home__info-title{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .home__info-description {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .home__link {
+        padding: 15px;
+    }
+
+    .login-link {
+        padding: 15px 47px;
+    }
+
+    .home__gallery-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .volcano-table-info {
+        margin-bottom: 15px;
+    }
+
+    .volcano-title {
+        font-size: 15px;
+    }
+
+    .volcano__data {
+        font-size: 13px;
+    }
+
+    .volcano-map{
+        width: 285px;
+    }
+
+    .chart-table {
+        height: 147px;
+    }
+
+    .register__form {
+        left: calc(50% - 159px);
+        width: 275px;
+    }
+
+    .login__form {
+        left: calc(50% - 159px);
+        width: 275px;
+    }
+}
