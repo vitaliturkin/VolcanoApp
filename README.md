@@ -35,10 +35,10 @@ PORT=5000
 Start the application:
 cd backend
 npm start
-The application will be running at http://localhost:5000.
+The application will be running at http://localhost:3000.
 
 Usage
-Access the Application: Open your browser and navigate to http://localhost:5000.​
+Access the Application: Open your browser and navigate to http://localhost:3000.​
 
 Explore Features: Interact with the maps, view real-time data, and utilize other features.​
 
